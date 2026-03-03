@@ -23,8 +23,11 @@ RegisterNumber: 212225040321
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
+
 data = pd.read_csv("Mall_Customers.csv")
+
 X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
+
 print(data.head())
 kmeans = KMeans(n_clusters=5, random_state=42)
 y_kmeans = kmeans.fit_predict(X)
